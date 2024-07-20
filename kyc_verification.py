@@ -7,8 +7,8 @@ def verify_kyc_extracted_data(extracted_data):
     :return: Verification result as a boolean
     """
     # Define simple patterns for name and ID (modify as needed)
-    name_pattern = r"Test (\w+)"
-    id_pattern = r"ID (\w+)"
+    name_pattern = r"Name: (\w+ \w+)"
+    id_pattern = r"ID: (\w+)"
     
     name_match = re.search(name_pattern, extracted_data)
     id_match = re.search(id_pattern, extracted_data)
